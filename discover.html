@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover — Rabbit Tinder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-shell">
+        <div class="top-bar">
+            <div class="logo">🐰 Bunny Match</div>
+            <span class="top-bar-icon" id="settings-icon">⚙️</span>
+        </div>
+
+        <main class="discover-main">
+            <div id="card-stack">
+                <!-- Sample rabbit profile cards. JS should be able to add/remove
+                     cards from this stack as the user swipes. -->
+                <article class="rabbit-card" data-rabbit-id="1">
+                    <div class="card-photo">🐇</div>
+                    <span class="card-badge like">Like</span>
+                    <span class="card-badge nope">Nope</span>
+                    <div class="card-info">
+                        <h2>Clover <span class="age">2</span></h2>
+                        <p class="card-breed">Holland Lop</p>
+                        <p class="card-bio">Professional carrot critic. Looking for someone to binky with at dusk.</p>
+                        <div class="card-tags">
+                            <span>Loves clover</span>
+                            <span>Weekend napper</span>
+                            <span>Litter trained</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="rabbit-card" data-rabbit-id="2">
+                    <div class="card-photo">🐰</div>
+                    <span class="card-badge like">Like</span>
+                    <span class="card-badge nope">Nope</span>
+                    <div class="card-info">
+                        <h2>Biscuit <span class="age">1</span></h2>
+                        <p class="card-breed">Netherland Dwarf</p>
+                        <p class="card-bio">Small but mighty. Enjoys long hops on the beach and short naps everywhere else.</p>
+                        <div class="card-tags">
+                            <span>Zoomies</span>
+                            <span>Hay connoisseur</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="rabbit-card" data-rabbit-id="3">
+                    <div class="card-photo">🐇</div>
+                    <span class="card-badge like">Like</span>
+                    <span class="card-badge nope">Nope</span>
+                    <div class="card-info">
+                        <h2>Pepper <span class="age">3</span></h2>
+                        <p class="card-breed">Flemish Giant</p>
+                        <p class="card-bio">Gentle giant with a big heart. Swipe right if you like snuggles and lettuce.</p>
+                        <div class="card-tags">
+                            <span>Cuddler</span>
+                            <span>Garden lover</span>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="no-more-cards hidden" id="no-more-cards">
+                    <div class="hero-emoji">🥕</div>
+                    <p>No more bunnies nearby. Check back soon!</p>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="action-btn pass" id="btn-pass" aria-label="Pass">✕</button>
+                <button class="action-btn superlike" id="btn-superlike" aria-label="Super Like">⭐</button>
+                <button class="action-btn like" id="btn-like" aria-label="Like">♥</button>
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="discover.html" class="nav-item active">
+                <span class="nav-icon">🐰</span>
+                Discover
+            </a>
+            <a href="matches.html" class="nav-item">
+                <span class="nav-icon">💕</span>
+                Matches
+            </a>
+        </nav>
+
+        <!-- Match modal: hidden until JS reveals it on a mutual like -->
+        <div class="modal-overlay hidden" id="match-modal">
+            <div class="modal">
+                <div class="match-avatars">
+                    <span>🐰</span>
+                    <span>🐇</span>
+                </div>
+                <h2>It's a Match!</h2>
+                <p id="match-modal-text">You and Clover liked each other.</p>
+                <div class="modal-actions">
+                    <button class="btn btn-primary" id="send-message-btn">Send a Message</button>
+                    <button class="btn btn-secondary" id="keep-swiping-btn">Keep Swiping</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="discover.js"></script>
+</body>
+</html>

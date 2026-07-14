@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches — Rabbit Tinder</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-shell">
+        <div class="top-bar">
+            <div class="logo">🐰 Bunny Match</div>
+        </div>
+
+        <main class="matches-main">
+            <h1>Your Matches</h1>
+
+            <!-- JS should populate this grid with .match-card elements,
+                 or show #empty-state when there are no matches. -->
+            <div id="matches-list"></div>
+
+            <div class="empty-state" id="empty-state">
+                <div class="hero-emoji">💌</div>
+                <p>No matches yet. Get out there and start swiping!</p>
+            </div>
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="discover.html" class="nav-item">
+                <span class="nav-icon">🐰</span>
+                Discover
+            </a>
+            <a href="matches.html" class="nav-item active">
+                <span class="nav-icon">💕</span>
+                Matches
+            </a>
+        </nav>
+    </div>
+    <script src="matches.js"></script>
+</body>
+</html>
